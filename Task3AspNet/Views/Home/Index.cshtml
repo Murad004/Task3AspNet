@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: skyblue;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        button {
+            width: 400px;
+            font-size: 2em;
+            text-align: center;
+            border-radius: 10px;
+            border: solid blue 2px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Welcome to Site</h1>
+
+    <div>
+        <form asp-controller="Home">
+
+            <button asp-controller="Home" asp-action="AddClient">Register User</button>
+            <button asp-controller="Home" asp-action="DeleteClient">Remove User</button>
+            <button asp-controller="Home" asp-action="UpdateClient">Update User</button>
+            <button asp-controller="Home" asp-action="ShowClient">Show User</button>
+            <button asp-controller="Home" asp-action="ShowClients">Show All User</button>
+        </form>
+    </div>
+
+</body>
+</html>

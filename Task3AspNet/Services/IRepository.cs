@@ -6,7 +6,7 @@ using Task3AspNet.Entities;
 
 namespace Task3AspNet.Services
 {
-    interface IRepository
+    public interface IRepository
     {
         void Add(User item);
         void Delete(int id);

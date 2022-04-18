@@ -16,7 +16,7 @@ namespace Task3AspNet.Controllers
         [HttpPost]
         public IActionResult AddClient()
         {
-            return RedirectToAction("Index", "Add");
+            return RedirectToAction("Index", "Register");
                 
         }
         public IActionResult DeleteClient()

@@ -1,0 +1,28 @@
+﻿@model Task3AspNet.Entities.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetClient</title>
+</head>
+<body>
+
+    <ol>
+        <li>Id : @Model.Id</li>
+        <li>Name : @Model.Name</li>
+        <li>Surname : @Model.Surname</li>
+        <li>Age : @Model.Age</li>
+        <li>Salary : @Model.Salary</li>
+    </ol>
+    <form asp-controller="GetClient">
+
+        <button asp-action="GoBack" type="submit" id="submit" class="submit">Go Back</button>
+    </form>
+</body>
+</html>

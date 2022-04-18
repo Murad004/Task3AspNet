@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Task3AspNet.Entities.User>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <ol>
+            <li>Id : @item.Id</li>
+        </ol>
+    }
+    <form asp-controller="GetClient">
+        @Html.Label("Input Element Id :");
+        @Html.TextBox("Id", ViewData["Id"]);
+        <button asp-action="GetClient" type="submit">Get Client</button>
+    </form>
+
+    <form asp-controller="ShowClients">
+
+        <button asp-action="GoBack" type="submit" id="submit" class="submit">Go Back</button>
+    </form>
+</body>
+</html>

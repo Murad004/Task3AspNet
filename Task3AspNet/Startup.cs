@@ -26,7 +26,7 @@ namespace Task3AspNet
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            string conn= @"Data Source = DESKTOP-QG7B4TK;Initial Catalog=UserDB; Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string conn= @"Data Source=DESKTOP-QG7B4TK;Initial Catalog=UserDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             services.AddDbContext<UserDbContext>(options => options.UseSqlServer(conn));
             services.AddScoped<IRepository, UserRepository>();
 
@@ -52,7 +52,7 @@ namespace Task3AspNet
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+                endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}");
             });
         }
     }

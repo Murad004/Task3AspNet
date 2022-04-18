@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Task3AspNet.Entities.User>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+
+
+</head>
+<body>
+    @foreach (var item in Model)
+    {
+        <ol>
+            <li>Id : @item.Id</li>
+            <li>Name : @item.Name</li>
+            <li>Surname : @item.Surname</li>
+            <li>Age : @item.Age</li>
+            <li>Address : @item.Address</li>
+            <li>Salary : @item.Salary</li>
+        </ol>
+    }
+
+    <form asp-controller="ShowClients">
+
+        <button asp-action="GoBack" type="submit" id="submit" class="submit">Back</button>
+    </form>
+</body>
+</html>

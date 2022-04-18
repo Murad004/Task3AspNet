@@ -8,11 +8,11 @@ using Task3AspNet.Services;
 
 namespace Task3AspNet.Controllers
 {
-    public class AddController : Controller
+    public class RegisterController : Controller
     {
         private IRepository repository;
 
-        public AddController(IRepository repository)
+        public RegisterController(IRepository repository)
         {
             this.repository = repository;
         }
